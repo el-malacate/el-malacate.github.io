@@ -59,8 +59,8 @@ p {
     color: var(--color-black);
 }
 
-html{
-    scroll-behavior:smooth;
+html {
+    scroll-behavior: smooth;
 }
 
 
@@ -194,7 +194,7 @@ nav ul li a:hover {
 }
 
 .naturaleza {
-    background-image: url(../img/paisaje.jpg);
+    background-image: url(../img/paisaje-image.jpg);
     background-size:cover;
     background-position:center;
     background-repeat:no-repeat;
@@ -251,25 +251,27 @@ nav ul li a:hover {
     color: var(--primary-color  );
 }
 
-.contaminacion-card,
-.incendios-card,
-.abandono-card {
-    background-color: var(--primary-color-var);
+.problematicas-grid .card:nth-child(odd){
+    background: var(--primary-color-var);
 }
 
-.agua-card,
-.urbanismo-card {
-    background-color: var(--secondary-color-var);
+.problematicas-grid .card:nth-child(even){
+    background: var(--secondary-color-var);
 }
 
-.contaminacion-card h3,
-.incendios-card h3,
-.abandono-card h3 {
+.problematicas-grid .card:nth-child(odd) h3{
     color: var(--primary-color);
 }
 
-.agua-card h3,
-.urbanismo-card h3 {
+.problematicas-grid .card:nth-child(odd) p{
+    color: var(--primary-color);
+}
+
+.problematicas-grid .card:nth-child(even) h3{
+    color: var(--quaternary-color);
+}
+
+.problematicas-grid .card:nth-child(even) p{
     color: var(--quaternary-color);
 }
 
@@ -293,15 +295,16 @@ nav ul li a:hover {
     padding:15px;
     background:rgba(255,255,255,.18);
     border-radius:50%;
+
 }
 
-.territorio-grid{
+.problematicas-grid{
     display:flex;
     flex-wrap:wrap;
     gap:20px;
 }
 
-.territorio-grid .card-height{
+.problematicas-grid .card-height{
     flex:1 1 280px;
 }
 
@@ -315,14 +318,77 @@ nav ul li a:hover {
     flex:1 1 280px;
 }
 
-.problematica-grid{
+.territorio-grid{
     display:flex;
     flex-wrap:wrap;
     gap:20px;
 }
 
-.problematica-grid .card-height{
+.territorio-grid .card-height{
     flex:1 1 280px;
+}
+
+/* CTA */
+
+.cta-section{
+    background-color: var(--primary-color);
+}
+
+.cta-content{
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cta-section h2{
+    color: var(--background-color-two);
+    margin-bottom: 25px;
+}
+
+.cta-section p{
+    color: var(--background-color-two);
+    line-height: 1.8;
+    margin-bottom: 18px;
+}
+
+/* GALERIA */
+
+.gallery-section{
+    padding:80px 40px;
+}
+
+.gallery-header{
+    max-width:700px;
+    margin:0 auto 50px;
+    text-align:center;
+}
+
+.gallery-header p{
+    line-height:1.8;
+}
+
+.gallery-grid{
+    columns:3 280px;
+    column-gap:20px;
+}
+
+.gallery-grid img{
+
+    width:100%;
+    display:block;
+    margin-bottom:20px;
+
+    border-radius:20px;
+
+    transition:.3s;
+
+    break-inside:avoid;
+}
+
+.gallery-grid img:hover{
+
+    transform:scale(1.02);
+
 }
 
 
